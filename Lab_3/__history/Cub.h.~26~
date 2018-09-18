@@ -1,0 +1,11 @@
+class Cube : public Square {
+private:
+	float h;
+public:
+	Cube(float  x, float y, float storona, float vusota);
+	float SPoverhnosti();
+
+	float Objom();
+
+	void RotateFig();
+};

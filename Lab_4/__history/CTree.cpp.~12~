@@ -1,0 +1,108 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "CTree.h"
+#include <conio.h>
+#include <stdio.h>
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+    void CTree::view_all ()
+   {
+	view(root,0);
+   }
+   CTree::CTree(char* n_name, int n_n , int n_key)
+   {
+	 CVetv * t = new CVetv(n_n,n_key);
+	 root = t;
+
+   }
+
+CVetv* CTree::find(int fnd)
+{
+  find(fnd, root);
+}
+CVetv * CTree::find(int fnd, CVetv * dr) // поиск в заданной ветке root если веэде
+  {
+	   if (!dr) return  NULL;
+	   if (dr->key == fnd) return dr;
+	   if (dr->key > fnd ) return find(fnd, dr->l);
+		  else if (dr->key < fnd ) return find(fnd,dr->r);
+  }
+
+CVetv* CTree::add(int i, int n_key)
+	{
+		int	find = 0;
+		CVetv *	prev;
+
+		CVetv * t = root;				// Признак поиска
+		while ( t && ! find) {
+			prev = t ;
+			if( n_key == t->key)
+			find = 1;	 	// Ключи должны быть уникальны
+			else
+				if ( n_key < t -> key ) t = t -> l;
+					else   t = t -> r;
+		}
+
+		if (!find) {					// Нашли место с адресом prev
+			t = new CVetv(i,n_key);				// Создаем новый узел
+			if ( n_key < prev -> key )		// и присоединяем его, либо
+					prev -> l = t;		// на левую ветвь,
+			else    prev -> r = t;		// либо на правую ветвь
+			return t;
+		}
+		else
+		 return NULL;
+	 }
+//Функция add_ предназначена для создания нового элемента – листа:
+CVetv::CVetv (int inf, int key)
+  {
+	this->inf = inf;
+	this->key = key;
+	l = r = NULL;
+}
+
+ void CTree::view ( CVetv *t, int lv )
+{
+	if ( t ) {
+		view ( t ->r , lv+1);		// Вывод правого поддерева
+		for ( int i=0; i<lv; i++)  printf("    ");
+		printf(" %i\n", t -> key);
+		view( t ->l , lv+1); 		// Вывод левого поддерева
+	}
+}
+
+CTree::~CTree ()
+{
+		del_vet( root->r);
+		del_vet( root->l);
+		delete root;
+	}
+
+ void CTree::del_vet(CVetv *d)
+{
+	if ( d ) {
+		del_vet( d ->r);
+		del_vet( d ->l);
+		delete d;
+	}
+}
+
+void CTree::usl( CVetv *t, int lv, int _lv )
+{
+	if ( t ) {
+	usel+= t ->key;
+	usl( t ->r , lv+1);
+	usl( t ->l, lv+1);
+	}
+	usel-=root ->key;
+}
+
+int CTree::coll (int _lv )
+{
+	usel=0;
+	usl(root, 0);
+	return usel;
+}

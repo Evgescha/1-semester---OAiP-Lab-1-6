@@ -1,0 +1,83 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <iostream.h>
+#include <cmath>
+#include <tchar.h>
+#include <Windows.h>
+using namespace std;
+//---------------------------------------------------------------------------
+
+
+
+class Square{
+
+private:
+		float x1, y1, x2, y2, storona, xc, yc, x1p, x2p, y1p, y2p;
+
+public:
+
+	Square (int storona)
+		{
+		  x1=0;
+		  y1=0;
+		  x2=storona;
+		  y2=storona;
+		}
+	Square(int x, int y, int storona)
+		{
+		  x1=x;
+		  y1=y;
+		  x2=x1+storona;
+		  y2=y1+storona;
+		}
+	 void SFig()
+	  {
+          cout << "S = " << (x2-x1)*(y2-y1)<< "\n";
+	  }
+	  void PFig()
+	  {
+	  cout<<"P = " << 2*((x2-x1) + (y2-y1)) << "\n";
+	  }
+	  void RotateFig()
+	  {
+       cout<<" НАчальные точки \n";
+	   cout<<"x1 = " << x1p <<" x2 = " << x2p <<" y1 = " << y1p <<" y2 = " << y2p<< "\n";
+       cout<<" Точки после смещения \n";
+	   xc = x1+(x2-x1)/2;
+	   yc = y2+(y2-y1)/2;
+
+	x1p = (xc +(x1-xc))* cos(30*M_PI/180)+(yc-y1)*sin(30*M_PI/180);
+	y1p = (yc + (x1 - xc)) * sin(30*M_PI/180) + (y1 - yc) * cos(30*M_PI/180);
+	x2p = (xc +(x2-xc))* cos(30*M_PI/180)+(yc-y2)*sin(30*M_PI/180);
+	y2p = (yc + (x2 - xc)) * sin(30*M_PI/180) + (y2 - yc) * cos(30*M_PI/180);
+	cout<<"x1 = " << x1 <<" x2 = " << x2 <<" y1 = " << y1 <<" y2 = " << y2<< "\n";
+
+
+	  }
+
+	};
+
+
+#pragma argsused
+int _tmain(int argc, _TCHAR* argv[])
+{
+SetConsoleOutputCP(1251);
+SetConsoleCP(1251);
+float x, y, stor;
+cout<<"Введите сторону квадрата  ";
+cin >> stor;
+cout<<"Введите координату X ";
+cin >> x;
+cout<<"Введите координату Y ";
+cin >> y;
+
+	   Square SqtStor(stor);
+	   SqtStor.SFig();
+	   SqtStor.PFig();
+	   SqtStor.RotateFig();
+
+    system("pause");
+	return 0;
+}
+//---------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+
+class Square{
+
+public:
+float x1, y1, storona;
+	Square ();
+	Square (float storona);
+	Square(float x, float y, float storona);
+	float SFig();
+	float PFig();
+	void RotateFig(float Angle, float &_x,float &_y);
+};
+
+class Cube : public Square {
+private:
+	float z;
+public:
+	Cube(float  x, float y, float storona);
+	float SPoverhnosti();
+
+	float Objom();
+
+	void RotateFig(float Angle, float &g, float &b, float &h);
+};
+

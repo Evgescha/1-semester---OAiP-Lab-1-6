@@ -1,0 +1,25 @@
+#include "Cub.h"
+class Square{
+protected :
+		float x1, y1, storona;
+public:
+	Square ();
+	Square (float storona);
+	Square(float x, float y, float storona);
+	float SFig();
+	float PFig();
+	float RotateFig(float Angle);
+};
+
+class Cube : public Square {
+private:
+	float z;
+public:
+	Cube(float  x, float y, float storona);
+	float SPoverhnosti();
+
+	float Objom();
+
+	void RotateFig(float Angle, float &g, float &b);
+};
+

@@ -1,0 +1,55 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 461
+  ClientWidth = 625
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnMouseUp = FormMouseUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 512
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = #1051#1077#1090#1077#1090#1100
+    TabOrder = 0
+  end
+  object PointSel: TRadioButton
+    Left = 512
+    Top = 80
+    Width = 113
+    Height = 17
+    Caption = #1058#1086#1095#1082#1072
+    TabOrder = 1
+  end
+  object CircSel: TRadioButton
+    Left = 512
+    Top = 103
+    Width = 113
+    Height = 17
+    Caption = #1054#1082#1088#1091#1078#1085#1086#1089#1090#1100
+    TabOrder = 2
+  end
+  object RectSel: TRadioButton
+    Left = 512
+    Top = 126
+    Width = 113
+    Height = 17
+    Caption = #1055#1088#1103#1084#1086#1091#1075#1086#1083#1100#1085#1080#1082
+    TabOrder = 3
+  end
+  object Timer1: TTimer
+    Interval = 100
+    Left = 568
+    Top = 200
+  end
+end

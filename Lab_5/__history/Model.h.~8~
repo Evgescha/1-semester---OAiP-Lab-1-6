@@ -1,0 +1,73 @@
+//---------------------------------------------------------------------------
+
+#ifndef ModelH
+#define ModelH
+#include <vcl.h>
+
+//---------------------------------------------------------------------------
+#endif
+
+class CPole{
+ private:
+   TList *pPtLst;
+   TCanvas * Cnv;
+   TColor Clr;
+   TColor BgClr;
+ public:
+   CPole(TCanvas * Cnv, TColor Clr, TColor BgClr);
+  ~CPole();
+  void addPoint(double n_x, double n_y);
+  void addCircle(double n_x, double n_y);
+  void addRectangl(double n_x, double n_y);
+  void fly();
+   };
+
+class CPoint {
+// можно и не создавать создастся автоматически такой же пустой
+public:
+CPoint (double n_x, double n_y, TCanvas * Cnv, TColor Clr, TColor BgClr);
+CCircle (double n_x, double n_y, TCanvas * Cnv, TColor Clr, TColor BgClr);
+CRectangl (double n_x, double n_y, TCanvas * Cnv, TColor Clr, TColor BgClr);
+virtual void Move (double dx, double dy);
+double GetX (){return x;}
+double GetY (){return y; }
+
+void SetX (double x){ if (x>0) this->x = x;}
+void SetY (double y){ if (y>0) this->y = y;}
+virtual void Show();
+virtual void Hide();
+virtual void Paint();
+
+protected:
+double x, y;
+TCanvas * pCnv;
+TColor Clr, BgClr;
+ };
+
+class CCircle:public CPoint
+{
+public:
+CCircle(double n_x, double n_y, TCanvas * Cnv, TColor nClr, TColor nBgClr):CPoint(n_x,n_y, Cnv, nClr, nBgClr)
+{
+x=n_x;
+y=n_y;
+pCnv=Cnv;
+Clr=nClr;
+BgClr=nBgClr;
+}
+ virtual void Paint();
+}
+
+class CCircle:public CPoint
+{
+public:
+CRectangl(double n_x, double n_y, TCanvas * Cnv, TColor nClr, TColor nBgClr):CPoint(n_x,n_y, Cnv, nClr, nBgClr)
+{
+x=n_x;
+y=n_y;
+pCnv=Cnv;
+Clr=nClr;
+BgClr=nBgClr;
+}
+ virtual void Paint();
+}

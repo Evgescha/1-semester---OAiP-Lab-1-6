@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.499,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.496,=C:\Users\Evgenii\Documents\RAD Studio\Projects\File2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.720,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.605,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.032,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\Ctree.h=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.457,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File2.cpp=C:\Users\Evgenii\Documents\RAD Studio\Projects\File2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.173,=CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.426,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File1.h=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\Ctree.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.950,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.400,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File1.c</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.737,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\Project2.cbproj=C:\Users\Evgenii\Documents\RAD Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.204,CTree.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.670,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.842,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.807,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.806,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\File1.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.292,=C:\Users\Evgenii\Desktop\Lab 4\CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.956,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.870,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.612,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,=C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.842,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,C:\Users\Evgenii\Desktop\ОАиП Лабы\Lab 4\CTree.cpp=</Transaction>
+    <Transaction>2017.04.12 10:00:51.648,=C:\Users\Evgenii\Desktop\Lab 4\Debug\Win32\txt.txt</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Debug"/>
+    <File Path="Debug\Win32"/>
+    <File Path="Debug\Win32\txt.txt"/>
+    <File Path="File2.cpp"/>
+    <File Path="CTree.cpp"/>
+    <File Path="CTree.cpp"/>
+    <File Path="CTree.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

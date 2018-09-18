@@ -1,0 +1,67 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <tchar.h>
+#include <conio.h>
+#include <iostream.h>
+#include <CTree.h>
+#include <iostream>
+#include <fstream>
+
+//---------------------------------------------------------------------------
+ const N = 25;
+#pragma argsused
+int _tmain(int argc, _TCHAR* argv[])
+{   //строковые переменные для целой стороки, ключа, значения
+   char read[N];
+   char key[N];
+   char inf[N];
+   //открываем файл
+   ifstream in;
+   in.open("txt.txt", ios::in);
+   if(!in.is_open())
+   {
+   cout << "File not found! \n";
+   system("pause");
+   return 0;
+   }
+   //строкавая переменная раздеения между словами
+   char *d="\n ";
+   char *p;
+   //читаем строку
+   in.getline(read, '\n');
+   //ищем первое слово
+   p = strtok(read, d);
+   //записываем первое слово
+   strcpy(key, p);
+   //записываем остальные слова
+   while(p=strtok(NULL, d))
+   strcpy(inf, p);
+   //задаем дерево по первой строке, как ты сказал
+   CTree Der ("Derevo", atoi(key), atoi(inf));
+   //считываем остальные строки
+   while(!in.eof())
+		{
+		if(in.getline(read, '\n'))
+		{
+		//снова разделяем строку на два слова
+			p = strtok(read, d);
+			strcpy(key, p);
+			while(p=strtok(NULL, d))
+				{
+				strcpy(inf, p);
+				}
+				//добавляем листы через ключ и значение
+			Der.add(atoi(key), atoi(inf));
+		}
+   }
+   //выводим все
+	Der.view_all() ;
+	// считаем колличество узлов на уровне
+	int coll = Der.coll(3);
+	cout << coll << "\n";
+	system("pause");
+	return 0;
+}
+//---------------------------------------------------------------------------

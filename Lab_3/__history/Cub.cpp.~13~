@@ -1,0 +1,36 @@
+#include "Cub.h"
+#include <iostream.h>
+Cube :: Cube(float x, float y, float storona, float vusota)
+	{
+	Square(x,y,storona);
+	h = storona;
+	}
+
+float Cube :: SPoverhnosti()
+	{
+	return (6 * SFig());
+	}
+
+float Cube :: Objom()
+	{
+	return (h * SFig());
+	}
+
+void Cube :: RotateFig()
+	 {
+	 float xc, yc, x1p, x2p, y1p, y2p;
+	cout<<" Начальные точки \n";
+	cout<<"x1 = " << x1 <<" x2 = " << x2 <<" y1 = " << y1 <<" y2 = " << y2<<
+	 " z1 " << "0" << " z2 " << "0" << " \n";
+	 cout<<"x3 = " << x1 <<" x4 = " << x2 <<" y3 = " << y1 <<" y4 = " << y2<<
+	 " z3 " << storona << " z4 " << storona << " \n";
+	xc = 0;
+	yc = 0;
+	x1p = (xc +(x1-xc))* cos(30*M_PI/180)+(yc-y1)*sin(30*M_PI/180);
+	y1p = (yc + (x1 - xc)) * sin(30*M_PI/180) + (y1 - yc) * cos(30*M_PI/180);
+	x2p = (xc +(x2-xc))* cos(30*M_PI/180)+(yc-y2)*sin(30*M_PI/180);
+	y2p = (yc + (x2 - xc)) * sin(30*M_PI/180) + (y2 - yc) * cos(30*M_PI/180);
+	cout<<" Точки после смещения \n";
+	cout<<"x1 = " << x1p <<" x2 = " << x2p <<" y1 = " << y1p <<" y2 = " << y2p <<" z1 = " << "0" <<" z2 = " << "0" << "\n";
+	cout<<"x3 = " << x1p <<" x4 = " << x2p <<" y3 = " << y1p <<" y4 = " << y2p <<" z3 = " << storona << " z4 = " << storona << "\n";
+}
